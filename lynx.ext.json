@@ -1,0 +1,13 @@
+{
+  "platforms": {
+    "android": {
+      "packageName": "com.nanofuxion.tamerlocalstorage",
+      "moduleClassName": "com.nanofuxion.tamerlocalstorage.NativeLocalStorageModule",
+      "sourceDir": "android"
+    },
+    "ios": {
+      "podspecPath": "ios/tamerlocalstorage",
+      "moduleClassName": "NativeLocalStorageModule"
+    }
+  }
+}

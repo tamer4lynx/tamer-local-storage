@@ -1,0 +1,53 @@
+{
+  "name": "@tamer4lynx/tamer-local-storage",
+  "version": "0.0.1",
+  "type": "module",
+  "main": "dist/src/index.js",
+  "types": "dist/src/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/src/index.d.ts",
+      "import": "./dist/src/index.js",
+      "default": "./dist/src/index.js"
+    },
+    "./global": {
+      "types": "./dist/src/global.d.ts",
+      "import": "./dist/src/global.js",
+      "default": "./dist/src/global.js"
+    }
+  },
+  "publishConfig": {
+    "access": "public",
+    "tag": "prerelease"
+  },
+  "license": "MIT",
+  "description": "Native module providing local persistent storage for Lynx applications using SharedPreferences (Android) and UserDefaults (iOS)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tamer4lynx/tamer-local-storage.git"
+  },
+  "homepage": "https://github.com/tamer4lynx/tamer-local-storage#readme",
+  "bugs": {
+    "url": "https://github.com/tamer4lynx/tamer-local-storage/issues"
+  },
+  "devDependencies": {
+    "@types/node": "^24.1.0",
+    "typescript": "^5"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "author": "Nanofuxion <ramnadroj@gmail.com> (https://github.com/nanofuxion)",
+  "dependencies": {},
+  "scripts": {
+    "build": "rm -rf dist && tsc"
+  },
+  "files": [
+    "dist",
+    "src/typing.d.ts",
+    "android/src",
+    "android/build.gradle.kts",
+    "ios",
+    "lynx.ext.json"
+  ]
+}
