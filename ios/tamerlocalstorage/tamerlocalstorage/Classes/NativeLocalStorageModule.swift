@@ -20,13 +20,13 @@ public final class NativeLocalStorageModule: NSObject, LynxModule {
     private var userDefaults: UserDefaults
 
     @objc public init(param: Any) {
-        super.init()
         userDefaults = UserDefaults(suiteName: Self.suiteName) ?? UserDefaults.standard
+        super.init()
     }
 
     @objc public override init() {
-        super.init()
         userDefaults = UserDefaults(suiteName: Self.suiteName) ?? UserDefaults.standard
+        super.init()
     }
 
     @objc public func setStorageItem(_ key: String, _ value: String) {
