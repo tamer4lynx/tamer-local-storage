@@ -8,7 +8,7 @@ Web-standard `localStorage` API for Lynx applications. Provides persistent key-v
 npm install @tamer4lynx/tamer-local-storage
 ```
 
-Add to your app's dependencies and run `t4l link`. This package is automatically included when you run `t4l add-core`.
+Add to your app's dependencies and run `t4l link`. It is not part of `t4l add-core`; install it explicitly or use `t4l add tamer-local-storage`.
 
 ## Usage
 
