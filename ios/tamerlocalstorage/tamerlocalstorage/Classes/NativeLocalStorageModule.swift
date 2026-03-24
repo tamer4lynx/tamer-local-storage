@@ -17,16 +17,15 @@ public final class NativeLocalStorageModule: NSObject, LynxModule {
     }
 
     private static let suiteName = "com.nanofuxion.tamer.localstorage"
-    private var userDefaults: UserDefaults
+    private let userDefaults: UserDefaults
 
     @objc public init(param: Any) {
-        userDefaults = UserDefaults(suiteName: Self.suiteName) ?? UserDefaults.standard
+        self.userDefaults = UserDefaults(suiteName: Self.suiteName) ?? UserDefaults.standard
         super.init()
     }
 
-    @objc public override init() {
-        userDefaults = UserDefaults(suiteName: Self.suiteName) ?? UserDefaults.standard
-        super.init()
+    @objc public override convenience init() {
+        self.init(param: ())
     }
 
     @objc public func setStorageItem(_ key: String, _ value: String) {
